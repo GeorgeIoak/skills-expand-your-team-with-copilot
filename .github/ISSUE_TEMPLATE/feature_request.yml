@@ -1,0 +1,95 @@
+name: 🚀 Feature Request
+description: Request a new feature or enhancement for the Mergington High School activities website
+title: "[FEATURE] "
+labels: ["enhancement", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a new feature! This template will help provide all the details needed for Copilot to implement your request.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Title
+      description: What would you like to call this new feature?
+      placeholder: "e.g., Difficulty Levels for Activities, Student Search Filter, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: Describe the current situation and why this feature is needed
+      placeholder: |
+        Example: "Students are asking for activities that match their skill level, but currently all activities are mixed together making it hard to find appropriate ones."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe what you'd like to happen
+      placeholder: |
+        Example: "Add difficulty levels (Beginner, Intermediate, Advanced) to activities and a filter in the sidebar to show activities by difficulty level."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List the specific requirements that must be met for this feature to be complete
+      placeholder: |
+        Example:
+        - [ ] Activities can have difficulty levels assigned (Beginner, Intermediate, Advanced)
+        - [ ] A filter appears in the left sidebar with difficulty options
+        - [ ] Users can filter activities by difficulty level
+        - [ ] Activities without difficulty levels show in "All Levels" filter
+        - [ ] Difficulty level is displayed on activity cards when assigned
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Feature Area
+      description: Which part of the website does this feature affect?
+      options:
+        - Activities List/Display
+        - Navigation/Filtering
+        - User Interface/Design
+        - Student Registration
+        - Data Management
+        - Search/Discovery
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-hints
+    attributes:
+      label: Implementation Hints (Optional)
+      description: Any suggestions on how this could be implemented or technical considerations
+      placeholder: |
+        Example: "Could add a 'difficulty' field to the activity data structure and update the frontend filter component."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples that would help understand this request
+      placeholder: "Include any inspiration from other websites, sketches, or additional details that would help."
+
+  - type: checkboxes
+    id: urgency
+    attributes:
+      label: Priority Level
+      description: How urgent is this feature?
+      options:
+        - label: High Priority - Needed for upcoming school events
+        - label: Medium Priority - Would improve student experience significantly  
+        - label: Low Priority - Nice to have enhancement

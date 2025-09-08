@@ -1,0 +1,169 @@
+name: 💡 General Improvement
+description: Request other improvements, optimizations, or enhancements to the website
+title: "[IMPROVEMENT] "
+labels: ["enhancement", "improvement", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for improvement requests that don't fit the other categories - performance improvements, workflow enhancements, technical improvements, etc.
+
+  - type: input
+    id: improvement-title
+    attributes:
+      label: Improvement Title
+      description: What improvement are you requesting?
+      placeholder: "e.g., Make website load faster, Add email notifications, Improve data export, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-category
+    attributes:
+      label: Improvement Category
+      description: What type of improvement is this?
+      options:
+        - Performance/Speed
+        - User Experience/Workflow
+        - Data Management/Export
+        - Communication/Notifications
+        - Security/Privacy
+        - Documentation/Help
+        - Administrative Tools
+        - Integration with Other Systems
+        - Automation/Efficiency
+        - Technical Infrastructure
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Situation
+      description: Describe how things work currently and what could be better
+      placeholder: |
+        Example: "Currently, teachers have to manually check the website to see new student signups. This requires logging in multiple times per day and is time-consuming."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: Describe your idea for making things better
+      placeholder: |
+        Example: "Send email notifications to teachers when students sign up for their activities, including student name and contact information."
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Expected Benefits
+      description: What problems will this improvement solve? Who will benefit?
+      placeholder: |
+        Example: 
+        - Teachers will save time by not having to check manually
+        - Faster response to student signups
+        - Better communication between teachers and students
+        - Reduced chance of missing new registrations
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this improvement is successfully implemented?
+      placeholder: |
+        Example:
+        - [ ] Teachers receive email when students sign up for their activities
+        - [ ] Email includes student name, email, and signup timestamp
+        - [ ] Email notifications can be turned on/off by each teacher
+        - [ ] System handles multiple signups without sending too many emails
+        - [ ] Email format is clear and professional
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-users
+    attributes:
+      label: Who Will Benefit
+      description: Which users will be affected by this improvement?
+      multiple: true
+      options:
+        - Teachers/Staff
+        - Students
+        - Administrators
+        - Parents/Guardians
+        - Website Visitors
+        - System Administrators
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority-level
+    attributes:
+      label: Priority Level
+      description: How important is this improvement?
+      options:
+        - High - Significantly improves daily workflows
+        - Medium - Useful enhancement that would be appreciated
+        - Low - Nice to have but not critical
+        - Future - Good idea for later consideration
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-suggestions
+    attributes:
+      label: Implementation Suggestions (Optional)
+      description: Any ideas on how this could be technically implemented?
+      placeholder: |
+        Example: "Could add an email service integration and trigger emails when new registrations are saved to the database."
+
+  - type: textarea
+    id: constraints-considerations
+    attributes:
+      label: Constraints & Considerations
+      description: Any limitations, requirements, or concerns to keep in mind?
+      placeholder: |
+        Example:
+        - Must comply with school email policies
+        - Should not overwhelm teachers with too many notifications
+        - Need to consider privacy of student information
+        - Should work with existing school email system
+
+  - type: textarea
+    id: success-measurement
+    attributes:
+      label: How to Measure Success
+      description: How can we tell if this improvement is working well?
+      placeholder: |
+        Example: "Teachers report faster response times to student signups and spend less time manually checking the website."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about this improvement
+      placeholder: |
+        Include:
+        - Similar features you've seen elsewhere
+        - Feedback from other teachers/users
+        - Timeline considerations
+        - Budget or resource constraints
+
+  - type: checkboxes
+    id: impact-assessment
+    attributes:
+      label: Impact Assessment
+      description: Please consider
+      options:
+        - label: This improvement aligns with school policies and procedures
+          required: true
+        - label: I have considered the impact on all user types
+        - label: This improvement would be used regularly if implemented
+        - label: I have discussed this with other relevant staff members

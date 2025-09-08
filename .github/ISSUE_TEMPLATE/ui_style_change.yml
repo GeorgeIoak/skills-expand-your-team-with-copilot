@@ -1,0 +1,164 @@
+name: 🎨 UI/Style Change
+description: Request visual design changes, styling updates, or user interface improvements
+title: "[UI] "
+labels: ["ui", "design", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to the website's appearance, layout, colors, or visual design.
+
+  - type: input
+    id: ui-title
+    attributes:
+      label: UI Change Title
+      description: What visual change are you requesting?
+      placeholder: "e.g., Update colors to match school theme, Improve mobile layout, Add school mascot, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ui-type
+    attributes:
+      label: Type of UI Change
+      description: What kind of visual change is this?
+      options:
+        - Color Scheme/Branding
+        - Layout/Positioning
+        - Typography/Fonts
+        - Images/Graphics
+        - Mobile/Responsive Design
+        - Navigation/Menu
+        - Buttons/Interactive Elements
+        - Overall Theme/Style
+        - Accessibility Improvements
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-appearance
+    attributes:
+      label: Current Appearance
+      description: Describe what the website currently looks like in the area you want changed
+      placeholder: |
+        Example: "The website currently uses blue colors throughout, but our school colors are white and lime green."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-appearance
+    attributes:
+      label: Desired Appearance
+      description: Describe exactly how you want it to look
+      placeholder: |
+        Example: "Change the primary color from blue to lime green (#32CD32) and use white backgrounds. Add the school mascot (from octodex.github.com) in the header."
+    validations:
+      required: true
+
+  - type: textarea
+    id: school-branding
+    attributes:
+      label: School Branding Requirements
+      description: Provide specific school branding details (colors, logos, mascots, etc.)
+      placeholder: |
+        Example:
+        School Colors: White (#FFFFFF) and Lime Green (#32CD32)
+        Mascot: Use GitHub Octodex character (specify which one)
+        School Name: Mergington High School
+        Logo: [provide file or description]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-pages
+    attributes:
+      label: Affected Pages/Sections
+      description: Which parts of the website should have this change?
+      multiple: true
+      options:
+        - Homepage/Landing page
+        - Activities list page
+        - Individual activity details
+        - Navigation/Header
+        - Footer
+        - Sidebar/Filters
+        - Mobile view
+        - All pages
+        - Other (specify in context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this visual change is complete and looks correct?
+      placeholder: |
+        Example:
+        - [ ] Primary color changed from blue to lime green throughout the site
+        - [ ] White backgrounds are used consistently
+        - [ ] School mascot appears in the header
+        - [ ] Colors meet accessibility contrast requirements
+        - [ ] Design looks good on both desktop and mobile
+        - [ ] All interactive elements (buttons, links) are clearly visible
+    validations:
+      required: true
+
+  - type: textarea
+    id: inspiration-examples
+    attributes:
+      label: Inspiration/Examples
+      description: Provide links, images, or examples of what you're envisioning
+      placeholder: |
+        Example: 
+        - "Similar to the design at [website URL]"
+        - "Use the mascot from https://octodex.github.com/pythocat/"
+        - "Color scheme like our school website at [URL]"
+
+  - type: dropdown
+    id: devices-priority
+    attributes:
+      label: Device Priority
+      description: Which devices are most important for this change?
+      multiple: true
+      options:
+        - Desktop computers (primary)
+        - Tablets
+        - Mobile phones
+        - All devices equally
+    validations:
+      required: true
+
+  - type: textarea
+    id: accessibility-requirements
+    attributes:
+      label: Accessibility Requirements
+      description: Any specific accessibility needs to consider?
+      placeholder: |
+        Example: "Ensure text remains readable for students with visual impairments, maintain high contrast ratios"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other details about this visual change
+      placeholder: |
+        Include:
+        - Why this change is important
+        - Timeline/deadline if applicable
+        - Any technical constraints to consider
+        - Who requested or approved this change
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Design Requirements
+      description: Please confirm
+      options:
+        - label: This design change aligns with school branding guidelines
+          required: true
+        - label: I have approval for any major visual changes (if required)
+        - label: This design should maintain website accessibility standards
+          required: true
