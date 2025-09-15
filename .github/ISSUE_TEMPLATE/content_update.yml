@@ -1,0 +1,131 @@
+name: 📝 Content Update
+description: Request updates to activities, text, images, or other content on the website
+title: "[CONTENT] "
+labels: ["content", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to activities, descriptions, images, or other content on the website.
+
+  - type: input
+    id: content-title
+    attributes:
+      label: Content Update Title
+      description: What content needs to be updated?
+      placeholder: "e.g., Add new Drama Club activity, Update Chess Club description, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Type of Content Update
+      description: What kind of content needs to be changed?
+      options:
+        - Add New Activity
+        - Update Existing Activity
+        - Remove Activity
+        - Update Activity Description
+        - Update Activity Details (time, location, etc.)
+        - Update Website Text/Copy
+        - Update Images/Photos
+        - Update School Information
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content (if updating existing)
+      description: What is the current content that needs to be changed?
+      placeholder: |
+        Example: "Chess Club currently shows meeting on Mondays at 3 PM in Room 101"
+
+  - type: textarea
+    id: requested-content
+    attributes:
+      label: Requested New Content
+      description: Provide the exact content you want to see
+      placeholder: |
+        Example for new activity:
+        Activity Name: Drama Club
+        Description: Join our drama club to explore acting, directing, and stage production
+        Meeting Time: Tuesdays and Thursdays, 3:30-5:00 PM
+        Location: School Auditorium
+        Capacity: 25 students
+        Contact: Ms. Johnson (sarah.johnson@mergington.edu)
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-source
+    attributes:
+      label: Content Source & Verification
+      description: Where is this information coming from? How can we verify it's accurate?
+      placeholder: |
+        Example: "This information was provided by Ms. Johnson, the Drama Club advisor. She approved these details on [date]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this content update is complete and correct?
+      placeholder: |
+        Example:
+        - [ ] Drama Club appears in the activities list
+        - [ ] All activity details are displayed correctly
+        - [ ] Students can sign up for Drama Club
+        - [ ] Activity information matches what was provided
+        - [ ] Contact information is correct and functional
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Update Urgency
+      description: How quickly does this content need to be updated?
+      options:
+        - Urgent - Needed immediately (activity starts soon, incorrect information)
+        - High - Needed within a few days
+        - Medium - Needed within a week
+        - Low - Can be updated when convenient
+    validations:
+      required: true
+
+  - type: textarea
+    id: images-files
+    attributes:
+      label: Images or Files Needed
+      description: Are there any images, documents, or files that need to be added or updated?
+      placeholder: |
+        Example: "Need to add the Drama Club logo and a photo from last year's performance. Files will be provided separately."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other details about this content update
+      placeholder: |
+        Include:
+        - Why this change is needed
+        - When the activity starts/changes take effect
+        - Any special requirements or considerations
+        - Who to contact for questions
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Content Verification
+      description: Please confirm
+      options:
+        - label: I have verified this information is accurate
+          required: true
+        - label: I have approval from the relevant teacher/advisor (if applicable)
+        - label: This content follows school guidelines and policies
+          required: true

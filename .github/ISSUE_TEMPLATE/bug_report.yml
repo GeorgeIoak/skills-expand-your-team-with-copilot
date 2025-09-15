@@ -1,0 +1,130 @@
+name: 🐛 Bug Report
+description: Report a problem or issue with the Mergington High School activities website
+title: "[BUG] "
+labels: ["bug", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide as much detail as possible to help us fix the issue quickly.
+
+  - type: input
+    id: bug-title
+    attributes:
+      label: Bug Title
+      description: Brief description of the problem
+      placeholder: "e.g., Students can't sign up for activities, Colors don't match school theme, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Describe what is currently happening (the bug)
+      placeholder: |
+        Example: "When students click the 'Sign Up' button, nothing happens and they don't get added to the activity."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should happen instead
+      placeholder: |
+        Example: "Students should be able to click 'Sign Up' and be successfully registered for the activity with a confirmation message."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions to reproduce the bug
+      placeholder: |
+        Example:
+        1. Go to the activities page
+        2. Find an activity with available spots
+        3. Click the "Sign Up" button
+        4. See that nothing happens
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-area
+    attributes:
+      label: Affected Area
+      description: Which part of the website is affected?
+      options:
+        - Student Registration/Sign-up
+        - Activities Display
+        - Website Appearance/Styling
+        - Navigation/Links
+        - Data/Information Display
+        - Mobile/Tablet View
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How serious is this issue?
+      options:
+        - High - Blocks important functionality (students can't sign up, site is broken)
+        - Medium - Causes inconvenience but workarounds exist
+        - Low - Minor issue that doesn't significantly impact usage
+        - Visual - Appearance issue that doesn't affect functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages (if any)
+      description: Include any error messages you see
+      placeholder: "Copy and paste any error messages that appear"
+
+  - type: dropdown
+    id: browsers-affected
+    attributes:
+      label: Browser/Device
+      description: Where did you notice this issue?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Mobile (iPhone/Android)
+        - Tablet (iPad/Android)
+        - Other
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other information that might help fix this bug
+      placeholder: |
+        Include:
+        - Screenshots if it's a visual issue
+        - When you first noticed this problem  
+        - Whether this worked before
+        - Any other relevant details
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Fix Acceptance Criteria
+      description: How will we know this bug is fixed?
+      placeholder: |
+        Example:
+        - [ ] Students can successfully sign up for activities
+        - [ ] Confirmation message appears after signing up
+        - [ ] Student count updates correctly
+        - [ ] No error messages appear during normal usage
+    validations:
+      required: true
